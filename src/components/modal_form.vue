@@ -5,11 +5,8 @@
 </template>
 <script>
 import SimpleForm from './simple_form'
-import Emitter from 'iview/src/mixins/emitter'
-
 export default {
   name: 'ModalForm',
-  mixins: [Emitter],
   components: {
     SimpleForm
   },

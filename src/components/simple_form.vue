@@ -42,13 +42,12 @@
 </template>
 <script>
 import {mapState} from 'vuex'
-import Emitter from 'iview/src/mixins/emitter'
 /* eslint-disable */
 import {validate, isValidate, setCurrentClick, compareCurrentClick} from '../utils'
 // import {Input} from 'iview'
 export default {
   name: 'SimpleForm',
-  mixins: [ Emitter ],
+  // mixins: [ Emitter ],
   props: {
     showAction: {
       type: Boolean,

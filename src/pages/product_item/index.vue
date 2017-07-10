@@ -21,7 +21,6 @@ import columns from '../../columns/item'
 export default {
   name: 'productItem',
   data () {
-    console.log(new Date())
     return {
       columns: columns.call(this),
       tableWidth: 1200
@@ -30,9 +29,11 @@ export default {
   beforeMount () {
     this.fetch()
     let main = document.getElementsByClassName('main')[0]
-    this.tableWidth = main.clientWidth - 20
-    window.onresize = () => {
+    if (main) {
       this.tableWidth = main.clientWidth - 20
+      window.onresize = () => {
+        this.tableWidth = main.clientWidth - 20
+      }
     }
   },
   computed: {

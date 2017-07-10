@@ -35,7 +35,7 @@ export default {
     this.$store.dispatch('auth/get_profile')
   },
   mounted () {
-    if (document.body.clientWidth <= 440) {
+    if (document.documentElement.clientWidth <= 440) {
       this.isFluid = true
     }
   },
@@ -44,7 +44,7 @@ export default {
       this.isFluid = !this.isFluid
     },
     handleMainClick () {
-      if (document.body.clientWidth <= 440 && !this.isFluid) {
+      if (document.documentElement.clientWidth <= 440 && !this.isFluid) {
         this.isFluid = true
       }
     }

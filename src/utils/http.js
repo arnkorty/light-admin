@@ -68,7 +68,6 @@ function buildRequestURL (url, method, params) {
       url = url + '?' + query
     }
   }
-  console.log(url)
   return url
 }
 

@@ -8,13 +8,19 @@
 export default {
   name: 'app',
   data () {
+    let isMobile = false
+    if (document.documentElement.clientWidth <= 768) {
+      isMobile = true
+    }
     return {
-      isMobile: document.documentElement.clientWidth <= 768
+      isMobile
     }
   },
   beforeMount () {
     window.onresize = () => {
-      this.isMobile = document.documentElement.clientWidth <= 768
+      if (document.documentElement.clientWidth <= 768) {
+        this.isMobile = true
+      }
     }
   }
 }
